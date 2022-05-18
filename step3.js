@@ -2,8 +2,11 @@ const fs = require('fs');
 const process = require('process');
 const axios = require('axios');
 
+// ? For all of these functions we set an argument out and I'm not sure why we are doing this.
+// * The text parameter is the argument we are passing in as the third argument when we run the script in the terminal.
 function handleOutput(text, out) {
   if (out) {
+    // writeFile is a built in script in node.js. Double check with mentor for more explanation.
     fs.writeFile(out, text, 'utf8', function (err) {
       if (err) {
         console.error(`Error writing file ${out}: ${err}`);
@@ -43,8 +46,11 @@ async function webCat(url, out) {
 //   cat(path);
 // }
 
+// ? Why do we set these variables here and not at the top?
 let path;
 let out;
+
+// ? Need to go over with mentor on this.
 // * Alternate solution:
 if (process.argv[2] === '--out') {
   out = process.argv[3];
@@ -53,6 +59,7 @@ if (process.argv[2] === '--out') {
   path = process.argv[2];
 }
 
+// This logic is used to determine what function to call based on the input given in the terminal when running the script file.
 if (path.startsWith('http')) {
   webCat(path, out);
 } else {

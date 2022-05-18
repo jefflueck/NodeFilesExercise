@@ -2,6 +2,7 @@ const fs = require('fs');
 const process = require('process');
 const axios = require('axios');
 
+// ? How does node know if it needs to run a http call or a file read?
 function cat(path) {
   fs.readFile(path, 'utf8', (err, data) => {
     if (err) {
