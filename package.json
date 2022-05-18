@@ -1,0 +1,22 @@
+{
+  "name": "npm_files_exercise",
+  "version": "1.0.0",
+  "description": "Springboard Exercise using some providing code and adding node.js scripting by student",
+  "main": "step1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefflueck/nodeFilesExercise.git"
+  },
+  "author": "Jeff Lueck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jefflueck/nodeFilesExercise/issues"
+  },
+  "homepage": "https://github.com/jefflueck/nodeFilesExercise#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
